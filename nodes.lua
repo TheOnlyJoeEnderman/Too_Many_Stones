@@ -1237,6 +1237,54 @@ minetest.register_node("too_many_stones:galena_cracked_brick", {
 	groups = {cracky = 2, grey_stone = 1, stone = 1},
 	sounds = too_many_stones.node_sound_stone_defaults(),
 })
+-- Geyserite
+minetest.register_node("too_many_stones:geyserite", {
+	description = S("Geyserite"),
+	tiles = {"tms_geyserite.png"},
+	sunlight_propagates = true,
+	is_ground_content = true,
+	groups = {cracky = 3, yellow_stone = 1, stone = 1, granite = 1},
+	drop = "too_many_stones:geyserite_cobble",
+	sounds = too_many_stones.node_sound_stone_defaults(),
+})
+
+minetest.register_node("too_many_stones:geyserite_block", {
+	description = S("Geyserite Block"),
+	tiles = {"tms_geyserite_block.png"},
+	sunlight_propagates = true,
+	is_ground_content = false,
+	groups = {cracky = 3, yellow_stone = 1, stone = 1, granite = 1},
+	sounds = too_many_stones.node_sound_stone_defaults(),
+})
+
+minetest.register_node("too_many_stones:geyserite_cobble", {
+	description = S("Cobbled Geyserite"),
+	tiles = {"tms_geyserite_cobble.png"},
+	is_ground_content = false,
+	groups = {cracky = 3, yellow_stone = 1, stone = 2},
+	sounds = too_many_stones.node_sound_stone_defaults(),
+})
+
+minetest.register_node("too_many_stones:geyserite_brick", {
+	description = S("Geyserite Brick"),
+	sunlight_propagates = true,
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"tms_geyserite_brick.png"},
+	is_ground_content = false,
+	groups = {cracky = 2, yellow_stone = 1, stone = 1, granite = 1},
+	sounds = too_many_stones.node_sound_stone_defaults(),
+})
+
+minetest.register_node("too_many_stones:geyserite_cracked_brick", {
+	description = S("Cracked Geyserite Brick"),
+	paramtype2 = "facedir",
+	place_param2 = 0,
+	tiles = {"tms_geyserite_cracked_brick.png"},
+	is_ground_content = false,
+	groups = {cracky = 2, yellow_stone = 1, stone = 1, granite = 1},
+	sounds = too_many_stones.node_sound_stone_defaults(),
+})
 -- Black Granite
 minetest.register_node("too_many_stones:granite_black", {
 	description = S("Black Granite"),
